@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Box */
+.container {
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 0 25px rgba(56,189,248,0.3);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* Input Area */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #38bdf8;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0ea5e9;
+    color: white;
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #22c55e;
+}
+
+/* Responsive */
+@media(max-width: 480px){
+    .container {
+        width: 90%;
+    }
+}

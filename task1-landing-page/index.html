@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teja Web Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    <div class="logo">TejaTech 🚀</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Skills</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Hi, I'm Teja 👋</h1>
+        <p>A passionate Web Development Intern building modern websites.</p>
+        <button class="btn" onclick="scrollToServices()">Explore</button>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>My Skills</h2>
+    <div class="service-container">
+        <div class="card">
+            <h3>HTML & CSS</h3>
+            <p>Creating clean and responsive layouts.</p>
+        </div>
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Adding interactivity to websites.</p>
+        </div>
+        <div class="card">
+            <h3>UI Design</h3>
+            <p>Simple and user-friendly interfaces.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I am a B.Tech student passionate about web development and learning new technologies.</p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <textarea id="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+    </form>
+
+    <p id="formMessage"></p>
+</section>
+
+<footer>
+    <p>© 2026 Teja | Web Developer</p>
+</footer>
+
+<script>
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Button Scroll
+function scrollToServices() {
+    document.getElementById("services").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+// Form Validation
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let output = document.getElementById("formMessage");
+
+    if(name === "" || email === "" || message === "") {
+        output.style.color = "red";
+        output.innerText = "Fill all fields!";
+        return;
+    }
+
+    output.style.color = "green";
+    output.innerText = "Message sent successfully!";
+    
+    document.getElementById("contactForm").reset();
+});
+
+</script>
+
+</body>
+</html>

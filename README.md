@@ -11,8 +11,6 @@ The internship helped me improve my web development skills through practical pro
 💻 Domain: Web Development  
 
 🌐 Live Demo  
-https://guduru-hemanth-teja.github.io/OIBSIP/
-https://guduru-hemanth-teja.github.io/OIBSIP/
 🛠 Technologies Used
 - HTML5  
 - CSS3  

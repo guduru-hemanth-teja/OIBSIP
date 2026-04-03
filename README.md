@@ -12,7 +12,7 @@ The internship helped me improve my web development skills through practical pro
 
 🌐 Live Demo  
 https://guduru-hemanth-teja.github.io/OIBSIP/
-
+https://guduru-hemanth-teja.github.io/OIBSIP/
 🛠 Technologies Used
 - HTML5  
 - CSS3  
@@ -37,4 +37,4 @@ All projects are designed to work on:
 - JavaScript DOM Manipulation  
 - Git & GitHub  
 
-✨ Thank you for visiting my internship projects!
+✨ Thank you for visiting my internship 

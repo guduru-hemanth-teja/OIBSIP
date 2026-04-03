@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teja Temperature Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
+<body style="background:#0f172a; color:white; font-family:Arial; text-align:center; margin-top:100px;">
+
+    <h1>🌡 Temperature Converter</h1>
+
+    <input type="number" id="temperature" placeholder="Enter temperature"
+        style="padding:10px; border-radius:5px; border:none;">
+
+    <br><br>
+
+    <select id="unit" style="padding:10px; border-radius:5px;">
+        <option value="c">Celsius → Fahrenheit</option>
+        <option value="f">Fahrenheit → Celsius</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="convertTemp()" 
+        style="padding:10px 20px; background:#38bdf8; border:none; border-radius:5px; cursor:pointer;">
+        Convert
+    </button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function convertTemp() {
+            let temp = document.getElementById("temperature").value;
+            let unit = document.getElementById("unit").value;
+
+            if(temp === "") {
+                document.getElementById("result").innerText = "Enter value!";
+                return;
+            }
+
+            let result;
+
+            if(unit === "c") {
+                result = (temp * 9/5) + 32;
+                document.getElementById("result").innerText = result + " °F";
+            } else {
+                result = (temp - 32) * 5/9;
+                document.getElementById("result").innerText = result + " °C";
+            }
+        }
+    </script>
+
+</body>
+</html>

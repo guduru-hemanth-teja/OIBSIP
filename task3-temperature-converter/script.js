@@ -1,61 +1,111 @@
-function convertTemp() {
-    const tempInput = document.getElementById("temperature").value;
-    const unit = document.getElementById("unit").value;
-    const result = document.getElementById("result");
-
-    // RESET STYLE
-    result.style.opacity = "0";
-
-    setTimeout(() => {
-
-        if (tempInput === "" || isNaN(tempInput)) {
-            result.innerHTML = "Please enter a valid number";
-            result.style.color = "#ef4444"; // red
-            result.style.opacity = "1";
-            return;
-        }
-
-        const temp = parseFloat(tempInput);
-        let output = "";
-
-        if (unit === "celsius") {
-            const f = (temp * 9/5) + 32;
-            const k = temp + 273.15;
-            output = `${f.toFixed(2)} °F  |  ${k.toFixed(2)} K`;
-        } 
-        else if (unit === "fahrenheit") {
-            const c = (temp - 32) * 5/9;
-            const k = c + 273.15;
-            output = `${c.toFixed(2)} °C  |  ${k.toFixed(2)} K`;
-        } 
-        else {
-            const c = temp - 273.15;
-            const f = (c * 9/5) + 32;
-            output = `${c.toFixed(2)} °C  |  ${f.toFixed(2)} °F`;
-        }
-
-        result.innerHTML = `Converted: ${output}`;
-        result.style.color = "#2563eb"; // premium blue
-        result.style.opacity = "1";
-
-    }, 200); // smooth delay
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-
-// 🌗 DARK MODE (SMOOTH)
-function toggleMode() {
-    document.body.classList.toggle("dark");
-
-    const container = document.querySelector(".container");
-
-    if (document.body.classList.contains("dark")) {
-        document.body.style.background = "linear-gradient(135deg, #0f172a, #1e293b)";
-        container.style.background = "rgba(0,0,0,0.5)";
-    } else {
-        document.body.style.background = "linear-gradient(135deg, #e0f2fe, #dbeafe)";
-        container.style.background = "rgba(255,255,255,0.6)";
-    }
-    .result {
-    transition: all 0.3s ease;
-    }
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#eef5ff,#dbeafe);
+    transition:0.4s;
 }
+
+/* CONTAINER */
+.container{
+    width:350px;
+    padding:35px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+/* INPUT */
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+input,select{
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #e2e8f0;
+}
+
+/* CONVERT BUTTON */
+.convert-btn{
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(145deg,#3b82f6,#2563eb);
+    color:white;
+    font-weight:600;
+
+    box-shadow:0 6px 0 #1d4ed8,0 10px 20px rgba(0,0,0,0.2);
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.convert-btn:active{
+    transform:translateY(4px);
+    box-shadow:0 2px 0 #1d4ed8;
+}
+
+/* RESULT BOX */
+.result-box{
+    margin-top:20px;
+    padding:15px;
+    border-radius:12px;
+    background:#f1f5f9;
+    font-weight:600;
+    color:#1e293b;
+    transition:0.3s;
+}
+
+/* TOGGLE BUTTON */
+.toggle-btn{
+    margin-top:12px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#64748b;
+    color:white;
+    cursor:pointer;
+}
+
+/* DARK MODE */
+.dark{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.dark .container{
+    background:rgba(0,0,0,0.5);
+    color:white;
+}
+
+.dark .result-box{
+    background:#1e293b;
+    color:white;
+}
+
+.dark input,
+.dark select{
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
+        }

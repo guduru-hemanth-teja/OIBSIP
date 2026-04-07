@@ -1,50 +1,46 @@
-// Typing Animation
-const text = "Web Developer | Learner";
-let i = 0;
+let display = document.getElementById('result');
 
-function typingEffect() {
-  let element = document.getElementById("typing");
-  if (!element) return;
-
-  if (i < text.length) {
-    element.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typingEffect, 60);
-  }
-}
-typingEffect();
-
-
-// Counter Animation
-function counter(id, target) {
-  let count = 0;
-  let speed = 100;
-
-  let interval = setInterval(() => {
-    count++;
-    let el = document.getElementById(id);
-    if (el) {
-      el.innerText = count;
-    }
-
-    if (count >= target) {
-      clearInterval(interval);
-    }
-  }, speed);
+function appendToDisplay(value) {
+    display.value += value;
 }
 
-counter("exp", 1);
-counter("projectsDone", 3);
-counter("Languages", 5);
+function clearDisplay() {
+    display.value = '';
+}
 
+function deleteLast() {
+    display.value = display.value.slice(0, -1);
+}
 
-// Smooth Scroll
-document.querySelectorAll("a[href^='#']").forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    const section = document.querySelector(this.getAttribute("href"));
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+function calculate() {
+    try {
+        // Replace × with * for calculation
+        let expression = display.value.replace(/×/g, '*');
+        let result = eval(expression);
+        display.value = result;
+    } catch (error) {
+        display.value = 'Error';
+        setTimeout(clearDisplay, 1500);
     }
-  });
+}
+
+// Keyboard Support
+document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    
+    if (key >= '0' && key <= '9' || key === '.') {
+        appendToDisplay(key);
+    } else if (key === '+' || key === '-') {
+        appendToDisplay(key);
+    } else if (key === '*') {
+        appendToDisplay('×');
+    } else if (key === '/') {
+        appendToDisplay('/');
+    } else if (key === 'Enter' || key === '=') {
+        calculate();
+    } else if (key === 'Escape' || key === 'c' || key === 'C') {
+        clearDisplay();
+    } else if (key === 'Backspace') {
+        deleteLast();
+    }
 });

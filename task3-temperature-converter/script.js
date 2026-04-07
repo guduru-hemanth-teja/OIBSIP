@@ -1,111 +1,48 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+function convertTemp(){
+
+    let value = document.getElementById("temperature").value;
+    let unit = document.getElementById("unit").value;
+    let result = document.getElementById("result");
+
+    if(value === "" || isNaN(value)){
+        result.innerText = "Enter valid number";
+        result.style.color = "red";
+        return;
+    }
+
+    let temp = parseFloat(value);
+    let output = "";
+
+    if(unit === "celsius"){
+        let f = (temp * 9/5) + 32;
+        let k = temp + 273.15;
+        output = `${f.toFixed(2)} °F | ${k.toFixed(2)} K`;
+    }
+    else if(unit === "fahrenheit"){
+        let c = (temp - 32) * 5/9;
+        let k = c + 273.15;
+        output = `${c.toFixed(2)} °C | ${k.toFixed(2)} K`;
+    }
+    else{
+        let c = temp - 273.15;
+        let f = (c * 9/5) + 32;
+        output = `${c.toFixed(2)} °C | ${f.toFixed(2)} °F`;
+    }
+
+    result.innerText = "Converted: " + output;
+    result.style.color = "#2563eb";
 }
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#eef5ff,#dbeafe);
-    transition:0.4s;
-}
-
-/* CONTAINER */
-.container{
-    width:350px;
-    padding:35px;
-    text-align:center;
-
-    background:rgba(255,255,255,0.7);
-    backdrop-filter:blur(12px);
-
-    border-radius:20px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.1);
-}
-
-h1{
-    color:#2563eb;
-    margin-bottom:20px;
-}
-
-/* INPUT */
-.input-group{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-input,select{
-    padding:12px;
-    border-radius:10px;
-    border:1px solid #e2e8f0;
-}
-
-/* CONVERT BUTTON */
-.convert-btn{
-    margin-top:15px;
-    padding:12px;
-    border:none;
-    border-radius:12px;
-
-    background:linear-gradient(145deg,#3b82f6,#2563eb);
-    color:white;
-    font-weight:600;
-
-    box-shadow:0 6px 0 #1d4ed8,0 10px 20px rgba(0,0,0,0.2);
-    cursor:pointer;
-    transition:0.2s;
-}
-
-.convert-btn:active{
-    transform:translateY(4px);
-    box-shadow:0 2px 0 #1d4ed8;
-}
-
-/* RESULT BOX */
-.result-box{
-    margin-top:20px;
-    padding:15px;
-    border-radius:12px;
-    background:#f1f5f9;
-    font-weight:600;
-    color:#1e293b;
-    transition:0.3s;
-}
-
-/* TOGGLE BUTTON */
-.toggle-btn{
-    margin-top:12px;
-    padding:10px;
-    border:none;
-    border-radius:8px;
-    background:#64748b;
-    color:white;
-    cursor:pointer;
-}
 
 /* DARK MODE */
-.dark{
-    background:linear-gradient(135deg,#0f172a,#1e293b);
+function toggleMode(){
+    document.body.classList.toggle("dark");
 }
 
-.dark .container{
-    background:rgba(0,0,0,0.5);
-    color:white;
-}
 
-.dark .result-box{
-    background:#1e293b;
-    color:white;
-}
-
-.dark input,
-.dark select{
-    background:#1e293b;
-    color:white;
-    border:1px solid #334155;
-        }
+/* ENTER KEY SUPPORT */
+document.getElementById("temperature").addEventListener("keypress",function(e){
+    if(e.key === "Enter"){
+        convertTemp();
+    }
+});

@@ -5,42 +5,39 @@ Temperature Converter Web Application
 Overview
 
 This project is developed as part of the Oasis Infobyte Web Development Internship (Task 3).
-It is a temperature converter web application that allows users to convert values between Celsius, Fahrenheit, and Kelvin with a clean and interactive user interface.
+It is a modern temperature converter web application that allows users to easily convert values between Celsius, Fahrenheit, and Kelvin.
 
-The goal of this project is to demonstrate core JavaScript functionality along with modern UI design and responsive layout.
+The application is designed with a clean user interface, smooth interactions, and responsive layout to provide a better user experience.
 
 Key Highlights
 
-- Clean and modern user interface
-- Real-time temperature conversion
-- Smooth button interaction with 3D effect
-- Glassmorphism inspired design
-- Dark mode toggle feature
-- Responsive layout for all devices
+- Clean and modern UI design
+- Glassmorphism interface
+- 3D interactive button
+- Smooth user experience
+- Dark mode support
+- Fully responsive design
 
 Features
 
 - Convert temperature between:
-  - Celsius to Fahrenheit & Kelvin
-  - Fahrenheit to Celsius & Kelvin
-  - Kelvin to Celsius & Fahrenheit
-- Input validation for user-friendly experience
-- Smooth animations and transitions
-- Light and Dark mode support
+  - Celsius to Fahrenheit and Kelvin
+  - Fahrenheit to Celsius and Kelvin
+  - Kelvin to Celsius and Fahrenheit
+- Input validation for correct values
+- Instant result display
+- Dark and Light mode toggle
+- Enter key support for quick conversion
 
 Technologies Used
 
 - HTML5
-- CSS3 (Flexbox, Glass UI, Responsive Design)
-- JavaScript (DOM Manipulation, Logic, Animations)
+- CSS3 (Glass UI, Responsive Design)
+- JavaScript (DOM Manipulation and Logic)
 
-Responsive Design
+Result
 
-This application works seamlessly on:
-
-- Mobile devices
-- Tablets
-- Desktop screens
+The application successfully converts temperature values and displays accurate results in a clean and interactive interface.
 
 Live Demo
 

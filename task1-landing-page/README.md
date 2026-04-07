@@ -1,27 +1,52 @@
-# 📱 Task 1 - Responsive Landing Page
+📱 Oasis Infobyte Internship Task 1
 
-## Oasis Infobyte Internship Task 1 ✅
+Responsive Landing Page
 
-🔗 **Live Demo:**  
-https://guduru-hemanth-teja.github.io/OIBSIP/task1-landing-page/
-
----
-
-## 🚀 Features
-- ✅ Fully Responsive Design
-- ✅ Hero Section with CTA
-- ✅ Features Grid
-- ✅ Modern UI Design
-- ✅ Smooth Navigation
+This project is developed as part of the Oasis Infobyte Web Development Internship (Task 1).
+It is a modern and responsive landing page designed using HTML, CSS, and JavaScript.
 
 ---
 
-## 🛠️ Tech Stack
-- HTML
-- CSS
-- JavaScript
+🌐 Live Demo
+
+👉 https://guduru-hemanth-teja.github.io/OIBSIP/task1-landing-page/
 
 ---
 
-## 👨‍💻 Author
+🚀 Features
+
+- ✅ Fully responsive design
+- 🎯 Hero section with call-to-action
+- 🧩 Structured layout with sections
+- ✨ Clean and modern UI
+- 🔗 Smooth navigation
+
+---
+
+🛠 Technologies Used
+
+- 🌐 HTML5
+- 🎨 CSS3
+- ⚡ JavaScript
+
+---
+
+📱 Responsive Design
+
+The landing page is optimized for:
+
+- 📱 Mobile devices
+- 📲 Tablets
+- 💻 Desktop screens
+
+---
+
+🎯 Objective
+
+The main goal of this project is to build a responsive and visually appealing landing page while applying core frontend development concepts.
+
+---
+
+👨‍💻 Author
+
 Hemanth Teja

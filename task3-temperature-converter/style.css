@@ -14,13 +14,14 @@ body{
     transition:0.4s;
 }
 
+/* CONTAINER */
 .container{
-    width:340px;
-    padding:40px;
+    width:350px;
+    padding:35px;
     text-align:center;
 
-    background:rgba(255,255,255,0.6);
-    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(12px);
 
     border-radius:20px;
     box-shadow:0 10px 40px rgba(0,0,0,0.1);
@@ -31,6 +32,7 @@ h1{
     margin-bottom:20px;
 }
 
+/* INPUT */
 .input-group{
     display:flex;
     flex-direction:column;
@@ -43,7 +45,7 @@ input,select{
     border:1px solid #e2e8f0;
 }
 
-/* 🔥 3D BUTTON */
+/* CONVERT BUTTON */
 .convert-btn{
     margin-top:15px;
     padding:12px;
@@ -64,21 +66,26 @@ input,select{
     box-shadow:0 2px 0 #1d4ed8;
 }
 
-/* RESULT */
-.result{
+/* RESULT BOX */
+.result-box{
     margin-top:20px;
+    padding:15px;
+    border-radius:12px;
+    background:#f1f5f9;
     font-weight:600;
+    color:#1e293b;
     transition:0.3s;
 }
 
-/* TOGGLE */
+/* TOGGLE BUTTON */
 .toggle-btn{
-    margin-top:10px;
-    background:#64748b;
-    color:white;
+    margin-top:12px;
     padding:10px;
     border:none;
     border-radius:8px;
+    background:#64748b;
+    color:white;
+    cursor:pointer;
 }
 
 /* DARK MODE */
@@ -89,4 +96,16 @@ input,select{
 .dark .container{
     background:rgba(0,0,0,0.5);
     color:white;
+}
+
+.dark .result-box{
+    background:#1e293b;
+    color:white;
+}
+
+.dark input,
+.dark select{
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
 }

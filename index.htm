@@ -2,113 +2,138 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Teja Web Solutions</title>
+    <title>Oasis Infobyte Internship Projects | Hemanth Teja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:linear-gradient(135deg,#eef5ff,#dbeafe);
+            text-align:center;
+            color:#1e293b;
+        }
+
+        header{
+            padding:50px 20px;
+        }
+
+        h1{
+            font-size:34px;
+            color:#2563eb;
+        }
+
+        header p{
+            margin-top:10px;
+            color:#64748b;
+        }
+
+        /* CONTAINER */
+        .container{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:25px;
+            padding:40px 20px;
+        }
+
+        /* CARD */
+        .card{
+            width:280px;
+            padding:25px;
+            border-radius:18px;
+
+            background:rgba(255,255,255,0.6);
+            backdrop-filter:blur(12px);
+
+            box-shadow:0 10px 30px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px) scale(1.02);
+        }
+
+        .card h3{
+            color:#2563eb;
+        }
+
+        .card p{
+            margin:10px 0;
+            color:#64748b;
+        }
+
+        /* BUTTON */
+        .btn{
+            display:inline-block;
+            margin-top:15px;
+            padding:10px 20px;
+
+            border-radius:8px;
+            text-decoration:none;
+
+            background:linear-gradient(135deg,#3b82f6,#2563eb);
+            color:white;
+
+            transition:0.3s;
+            box-shadow:0 5px 15px rgba(37,99,235,0.3);
+        }
+
+        .btn:hover{
+            transform:translateY(-3px);
+            box-shadow:0 10px 25px rgba(37,99,235,0.4);
+        }
+
+        footer{
+            margin-top:40px;
+            padding:20px;
+            color:#64748b;
+        }
+
+        @media(max-width:600px){
+            h1{font-size:26px;}
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">TejaTech 🚀</div>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Skills</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <h1>Oasis Infobyte Internship Projects</h1>
+    <p>Web Development Tasks by Hemanth Teja</p>
 </header>
 
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h1>Hi, I'm Teja 👋</h1>
-        <p>A passionate Web Development Intern building modern websites.</p>
-        <button class="btn" onclick="scrollToServices()">Explore</button>
+<div class="container">
+
+    <div class="card">
+        <h3>Task 1 Landing Page</h3>
+        <p>Responsive landing page using HTML CSS.</p>
+        <a href="task1-landing-page/" class="btn">View Project</a>
     </div>
-</section>
 
-<section class="services" id="services">
-    <h2>My Skills</h2>
-    <div class="service-container">
-        <div class="card">
-            <h3>HTML & CSS</h3>
-            <p>Creating clean and responsive layouts.</p>
-        </div>
-        <div class="card">
-            <h3>JavaScript</h3>
-            <p>Adding interactivity to websites.</p>
-        </div>
-        <div class="card">
-            <h3>UI Design</h3>
-            <p>Simple and user-friendly interfaces.</p>
-        </div>
+    <div class="card">
+        <h3>Task 2 Portfolio</h3>
+        <p>Modern portfolio with animations and responsive UI.</p>
+        <a href="task2-portfolio/" class="btn">View Project</a>
     </div>
-</section>
 
-<section class="about" id="about">
-    <h2>About Me</h2>
-    <p>I am a B.Tech student passionate about web development and learning new technologies.</p>
-</section>
+    <div class="card">
+        <h3>Task 3 Temperature Converter</h3>
+        <p>Interactive temperature converter with clean UI.</p>
+        <a href="task3-temperature-converter/" class="btn">View Project</a>
+    </div>
 
-<section class="contact" id="contact">
-    <h2>Contact Me</h2>
-
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Enter your name" required>
-        <input type="email" id="email" placeholder="Enter your email" required>
-        <textarea id="message" placeholder="Your message" required></textarea>
-        <button type="submit" class="btn">Send</button>
-    </form>
-
-    <p id="formMessage"></p>
-</section>
+</div>
 
 <footer>
-    <p>© 2026 Teja | Web Developer</p>
+    2026 Hemanth Teja Oasis Infobyte Internship
 </footer>
-
-<script>
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Button Scroll
-function scrollToServices() {
-    document.getElementById("services").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-// Form Validation
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
-    let output = document.getElementById("formMessage");
-
-    if(name === "" || email === "" || message === "") {
-        output.style.color = "red";
-        output.innerText = "Fill all fields!";
-        return;
-    }
-
-    output.style.color = "green";
-    output.innerText = "Message sent successfully!";
-    
-    document.getElementById("contactForm").reset();
-});
-
-</script>
 
 </body>
 </html>

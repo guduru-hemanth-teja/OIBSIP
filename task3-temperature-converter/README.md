@@ -5,18 +5,18 @@ Temperature Converter Web Application
 Overview
 
 This project is developed as part of the Oasis Infobyte Web Development Internship (Task 3).
-It is a modern temperature converter web application that allows users to easily convert values between Celsius, Fahrenheit, and Kelvin.
+It is a modern temperature converter web application that allows users to convert values between Celsius, Fahrenheit, and Kelvin.
 
-The application is designed with a clean user interface, smooth interactions, and responsive layout to provide a better user experience.
+The application is designed with a clean user interface, smooth functionality, and responsive layout to provide a better user experience.
 
 Key Highlights
 
 - Clean and modern UI design
-- Glassmorphism interface
-- 3D interactive button
-- Smooth user experience
-- Dark mode support
-- Fully responsive design
+- White and blue premium theme
+- Glassmorphism inspired layout
+- 3D interactive buttons
+- Smooth and fast performance
+- Dark mode toggle feature
 
 Features
 
@@ -24,20 +24,20 @@ Features
   - Celsius to Fahrenheit and Kelvin
   - Fahrenheit to Celsius and Kelvin
   - Kelvin to Celsius and Fahrenheit
-- Input validation for correct values
-- Instant result display
-- Dark and Light mode toggle
+- Input validation for accurate results
+- Instant result display in styled result box
+- Dark and Light mode switching
 - Enter key support for quick conversion
 
 Technologies Used
 
 - HTML5
-- CSS3 (Glass UI, Responsive Design)
-- JavaScript (DOM Manipulation and Logic)
+- CSS3 (Responsive Design, Glass UI, 3D Buttons)
+- JavaScript (DOM Manipulation, Logic)
 
 Result
 
-The application successfully converts temperature values and displays accurate results in a clean and interactive interface.
+The application successfully performs temperature conversions and displays accurate results in a clean, interactive, and user-friendly interface.
 
 Live Demo
 

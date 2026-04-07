@@ -1,96 +1,61 @@
-class TodoApp {
-    constructor() {
-        this.todos = JSON.parse(localStorage.getItem('todos')) || [];
-        this.init();
-    }
+function convertTemp() {
+    const tempInput = document.getElementById("temperature").value;
+    const unit = document.getElementById("unit").value;
+    const result = document.getElementById("result");
 
-    init() {
-        this.todoInput = document.getElementById('todoInput');
-        this.addBtn = document.getElementById('addBtn');
-        this.todoList = document.getElementById('todoList');
-        this.totalTasks = document.getElementById('totalTasks');
-        this.completedTasks = document.getElementById('completedTasks');
-        this.clearCompletedBtn = document.getElementById('clearCompleted');
-        this.clearAllBtn = document.getElementById('clearAll');
+    // RESET STYLE
+    result.style.opacity = "0";
 
-        this.addBtn.addEventListener('click', () => this.addTodo());
-        this.todoInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') this.addTodo();
-        });
-        this.clearCompletedBtn.addEventListener('click', () => this.clearCompleted());
-        this.clearAllBtn.addEventListener('click', () => this.clearAll());
+    setTimeout(() => {
 
-        this.render();
-    }
-
-    addTodo() {
-        const text = this.todoInput.value.trim();
-        if (text) {
-            this.todos.push({
-                id: Date.now(),
-                text: text,
-                completed: false
-            });
-            this.todoInput.value = '';
-            this.save();
-            this.render();
+        if (tempInput === "" || isNaN(tempInput)) {
+            result.innerHTML = "Please enter a valid number";
+            result.style.color = "#ef4444"; // red
+            result.style.opacity = "1";
+            return;
         }
-    }
 
-    toggleTodo(id) {
-        this.todos = this.todos.map(todo => 
-            todo.id === id ? { ...todo, completed: !todo.completed } : todo
-        );
-        this.save();
-        this.render();
-    }
+        const temp = parseFloat(tempInput);
+        let output = "";
 
-    deleteTodo(id) {
-        this.todos = this.todos.filter(todo => todo.id !== id);
-        this.save();
-        this.render();
-    }
+        if (unit === "celsius") {
+            const f = (temp * 9/5) + 32;
+            const k = temp + 273.15;
+            output = `${f.toFixed(2)} °F  |  ${k.toFixed(2)} K`;
+        } 
+        else if (unit === "fahrenheit") {
+            const c = (temp - 32) * 5/9;
+            const k = c + 273.15;
+            output = `${c.toFixed(2)} °C  |  ${k.toFixed(2)} K`;
+        } 
+        else {
+            const c = temp - 273.15;
+            const f = (c * 9/5) + 32;
+            output = `${c.toFixed(2)} °C  |  ${f.toFixed(2)} °F`;
+        }
 
-    clearCompleted() {
-        this.todos = this.todos.filter(todo => !todo.completed);
-        this.save();
-        this.render();
-    }
+        result.innerHTML = `Converted: ${output}`;
+        result.style.color = "#2563eb"; // premium blue
+        result.style.opacity = "1";
 
-    clearAll() {
-        this.todos = [];
-        this.save();
-        this.render();
-    }
-
-    save() {
-        localStorage.setItem('todos', JSON.stringify(this.todos));
-    }
-
-    render() {
-        this.todoList.innerHTML = '';
-        
-        this.todos.forEach(todo => {
-            const li = document.createElement('li');
-            li.className = todo.completed ? 'todo completed' : 'todo';
-            li.innerHTML = `
-                <div class="todo-content">
-                    <input type="checkbox" ${todo.completed ? 'checked' : ''} onchange="todoApp.toggleTodo(${todo.id})">
-                    <span>${todo.text}</span>
-                </div>
-                <button class="delete-btn" onclick="todoApp.deleteTodo(${todo.id})">
-                    <i class="fas fa-trash"></i>
-                </button>
-            `;
-            this.todoList.appendChild(li);
-        });
-
-        const total = this.todos.length;
-        const completed = this.todos.filter(t => t.completed).length;
-        
-        this.totalTasks.textContent = total;
-        this.completedTasks.textContent = completed;
-    }
+    }, 200); // smooth delay
 }
 
-const todoApp = new TodoApp();
+
+// 🌗 DARK MODE (SMOOTH)
+function toggleMode() {
+    document.body.classList.toggle("dark");
+
+    const container = document.querySelector(".container");
+
+    if (document.body.classList.contains("dark")) {
+        document.body.style.background = "linear-gradient(135deg, #0f172a, #1e293b)";
+        container.style.background = "rgba(0,0,0,0.5)";
+    } else {
+        document.body.style.background = "linear-gradient(135deg, #e0f2fe, #dbeafe)";
+        container.style.background = "rgba(255,255,255,0.6)";
+    }
+    .result {
+    transition: all 0.3s ease;
+    }
+}

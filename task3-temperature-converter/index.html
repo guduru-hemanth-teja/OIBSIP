@@ -1,97 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Temperature Converter | Hemanth Teja</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter | Hemanth Teja</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #e0f2fe, #dbeafe);
-        }
-
-        .container {
-            background: rgba(255,255,255,0.6);
-            backdrop-filter: blur(15px);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            width: 320px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            color: #2563eb;
-        }
-
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        input, select {
-            padding: 10px;
-            border-radius: 8px;
-            border: none;
-            outline: none;
-        }
-
-        /* 🔥 3D BUTTON */
-        button {
-            margin-top: 15px;
-            padding: 12px;
-            border: none;
-            border-radius: 10px;
-            background: linear-gradient(145deg, #3b82f6, #2563eb);
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-
-            box-shadow: 0 6px 0 #1d4ed8, 0 10px 20px rgba(0,0,0,0.2);
-            transition: all 0.2s ease;
-        }
-
-        button:active {
-            transform: translateY(4px);
-            box-shadow: 0 2px 0 #1d4ed8, 0 5px 10px rgba(0,0,0,0.2);
-        }
-
-        .result {
-            margin-top: 15px;
-            font-weight: 600;
-            color: #1e293b;
-        }
-
-        .toggle {
-            margin-top: 10px;
-            background: #64748b;
-            box-shadow: none;
-        }
-
-        .toggle:active {
-            transform: none;
-        }
-
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
+
     <h1>Temperature Converter</h1>
 
     <div class="input-group">
@@ -104,11 +25,12 @@
         </select>
     </div>
 
-    <button onclick="convertTemp()">Convert</button>
+    <button class="convert-btn" onclick="convertTemp()">Convert</button>
 
-    <div class="result" id="result"></div>
+    <div id="result" class="result-box">Result will appear here</div>
 
-    <button class="toggle" onclick="toggleMode()">Toggle Mode</button>
+    <button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
+
 </div>
 
 <script src="script.js"></script>

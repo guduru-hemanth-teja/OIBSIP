@@ -1,80 +1,77 @@
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: #e2e8f0;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 - Landing Page | Oasis Infobyte</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Brand</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cta-btn">Get Started</button>
+        </nav>
+    </header>
 
-/* Header */
-.header {
-    padding: 40px 20px;
-}
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Revolutionary Product for Modern World</h1>
+            <p>Experience the future with our cutting-edge solution designed for tomorrow's challenges.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Start Free Trial</button>
+                <button class="btn-secondary">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="product-mockup"></div>
+        </div>
+    </section>
 
-.logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #38bdf8;
-}
+    <!-- Features -->
+    <section id="features" class="features">
+        <h2>Amazing Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Lightning Fast</h3>
+                <p>Blazing performance with optimized algorithms.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure & Safe</h3>
+                <p>Enterprise-grade security for your data.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Ready</h3>
+                <p>Perfect experience on all devices.</p>
+            </div>
+        </div>
+    </section>
 
-.header h1 {
-    color: #38bdf8;
-    margin-top: 10px;
-}
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Transform Your Business?</h2>
+        <button class="btn-primary large">Get Started Today</button>
+    </section>
 
-.header p {
-    color: #94a3b8;
-}
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2024 Brand Name. All rights reserved.</p>
+        </div>
+    </footer>
 
-/* Cards */
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 30px;
-}
-
-.card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 25px;
-    width: 260px;
-    transition: 0.3s;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.05);
-    background: rgba(255,255,255,0.08);
-}
-
-.card h3 {
-    color: #38bdf8;
-}
-
-/* Button */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
-    background: linear-gradient(45deg,#38bdf8,#0ea5e9);
-    color: black;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-    margin-top: 30px;
-    padding: 20px;
-    color: #64748b;
-}
+    <script src="script.js"></script>
+</body>
+</html>

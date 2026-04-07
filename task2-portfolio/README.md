@@ -49,7 +49,9 @@ The website is designed to work seamlessly on:
 
 Live Demo
 
-https://saireddy-sm.github.io/OIBSIP_Web_Development_Internship/task2-portfolio/
+## Live Demo
+
+https://guduru-hemanth-teja.github.io/OIBSIP/task2-portfolio/
 
 Internship Details
 

@@ -1,77 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 1 - Landing Page | Oasis Infobyte</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Hemanth Teja Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI}
+
+    body{background:#0f172a;color:#e2e8f0}
+
+    header{
+        display:flex;justify-content:space-between;align-items:center;
+        padding:20px 40px;background:#020617;position:sticky;top:0
+    }
+
+    .logo{font-size:22px;font-weight:bold;color:#38bdf8}
+
+    .nav-links{list-style:none;display:flex;gap:20px}
+
+    .nav-links a{text-decoration:none;color:#e2e8f0}
+    .nav-links a:hover{color:#38bdf8}
+
+    .hero{
+        height:100vh;display:flex;justify-content:center;align-items:center;
+        text-align:center;background:linear-gradient(to right,#020617,#0f172a)
+    }
+
+    .hero h1{font-size:42px;color:#38bdf8}
+    .hero p{margin:15px 0;color:#94a3b8}
+
+    .btn{
+        padding:10px 20px;background:#38bdf8;border:none;
+        border-radius:5px;cursor:pointer;color:black
+    }
+
+    .services,.about,.contact{padding:60px 20px;text-align:center}
+
+    .service-container{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+
+    .card{
+        background:#020617;padding:20px;width:240px;border-radius:10px;
+        transition:0.3s
+    }
+
+    .card:hover{transform:translateY(-10px);background:#1e293b}
+
+    form{display:flex;flex-direction:column;width:280px;margin:auto}
+
+    input,textarea{margin:10px 0;padding:10px;border-radius:5px;border:none}
+
+    footer{text-align:center;padding:20px;background:#020617}
+</style>
+
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">Brand</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="cta-btn">Get Started</button>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Revolutionary Product for Modern World</h1>
-            <p>Experience the future with our cutting-edge solution designed for tomorrow's challenges.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary">Start Free Trial</button>
-                <button class="btn-secondary">Learn More</button>
-            </div>
+<body><header>
+    <div class="logo">Hemanth Teja</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</header><section class="hero" id="home">
+    <div>
+        <h1>Hi I am Hemanth Teja</h1>
+        <p>Frontend Developer building modern websites</p>
+        <button class="btn" onclick="scrollToServices()">Explore</button>
+    </div>
+</section><section class="services" id="services">
+    <h2>My Skills</h2>
+    <div class="service-container">
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>Modern and clean UI design</p>
         </div>
-        <div class="hero-image">
-            <div class="product-mockup"></div>
+        <div class="card">
+            <h3>Development</h3>
+            <p>Responsive website creation</p>
         </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="features">
-        <h2>Amazing Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-rocket"></i>
-                <h3>Lightning Fast</h3>
-                <p>Blazing performance with optimized algorithms.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Secure & Safe</h3>
-                <p>Enterprise-grade security for your data.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile Ready</h3>
-                <p>Perfect experience on all devices.</p>
-            </div>
+        <div class="card">
+            <h3>Optimization</h3>
+            <p>Fast and performance focused</p>
         </div>
-    </section>
+    </div>
+</section><section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I am Hemanth Teja passionate about building websites and improving user experience.</p>
+</section><section class="contact" id="contact">
+    <h2>Contact Me</h2><form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+</form>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2>Ready to Transform Your Business?</h2>
-        <button class="btn-primary large">Get Started Today</button>
-    </section>
+<p id="formMessage"></p>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-content">
-            <p>&copy; 2024 Brand Name. All rights reserved.</p>
-        </div>
-    </footer>
+</section><footer>
+    <p>Hemanth Teja 2026</p>
+</footer><script>
 
-    <script src="script.js"></script>
-</body>
+function scrollToServices(){
+    document.getElementById("services").scrollIntoView({behavior:"smooth"})
+}
+
+// Smooth nav scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'})
+    })
+})
+
+// Form validation
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+    e.preventDefault();
+
+    let email=document.getElementById("email").value;
+    let output=document.getElementById("formMessage");
+
+    let pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if(!email.match(pattern)){
+        output.innerText="Enter valid email";
+        output.style.color="red";
+        return;
+    }
+
+    output.innerText="Message sent successfully";
+    output.style.color="lightgreen";
+})
+
+</script></body>
 </html>

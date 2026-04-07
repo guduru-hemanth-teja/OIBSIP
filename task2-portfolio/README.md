@@ -1,63 +1,79 @@
-Oasis Infobyte Internship Task 2
+👨‍💻 Oasis Infobyte Internship Task 2
 
-Personal Portfolio Website
+🌐 Personal Portfolio Website
 
-Overview
+---
+
+📖 Overview
 
 This project is developed as part of the Oasis Infobyte Web Development Internship (Task 2).
-It is a personal portfolio website designed to present my profile, skills, and projects in a clean, modern, and professional format.
+It is a personal portfolio website designed to showcase my profile, skills, and projects in a clean, modern, and professional format.
 
 The main goal of this project is to demonstrate frontend development skills along with responsive design and smooth user experience.
 
-Key Highlights
+---
 
-- Modern and clean portfolio layout
-- Smooth scrolling and interactive UI
-- Typing animation in hero section
-- Structured sections for better user experience
-- Fully responsive across all devices
-- Optimized and lightweight design
+✨ Key Highlights
 
-Sections Included
+- 🎨 Modern and clean portfolio layout
+- ⚡ Smooth scrolling and interactive UI
+- ⌨️ Typing animation in hero section
+- 📂 Well-structured sections
+- 📱 Fully responsive design
+- 🚀 Optimized and lightweight
 
-- Home introduction
-- About me
-- Skills and services
-- Project showcase
-- Contact details
+---
 
-Features
+📑 Sections Included
 
-- Responsive design using Flexbox and Media Queries
-- Interactive animations using JavaScript
-- Clean UI with consistent color theme
-- Smooth navigation between sections
+- 🏠 Home
+- 🙋 About Me
+- 🛠 Skills and Services
+- 📁 Projects
+- 📞 Contact
 
-Technologies Used
+---
 
-- HTML5
-- CSS3
-- JavaScript
+🚀 Features
 
-Responsive Design
+- 📐 Responsive design using Flexbox and Media Queries
+- ⚡ Interactive animations using JavaScript
+- 🎯 Clean UI with consistent color theme
+- 🔗 Smooth navigation between sections
 
-The website is designed to work seamlessly on:
+---
 
-- Mobile devices
-- Tablets
-- Desktop screens
+🛠 Technologies Used
 
-Live Demo
+- 🌐 HTML5
+- 🎨 CSS3
+- ⚡ JavaScript
 
-## Live Demo
+---
 
-https://guduru-hemanth-teja.github.io/OIBSIP/task2-portfolio/
+📱 Responsive Design
 
-Internship Details
+The website works seamlessly on:
+
+- 📱 Mobile devices
+- 📲 Tablets
+- 💻 Desktop screens
+
+---
+
+🌐 Live Demo
+
+👉 https://guduru-hemanth-teja.github.io/OIBSIP/task2-portfolio/
+
+---
+
+📌 Internship Details
 
 This project is submitted as part of:
 Oasis Infobyte Web Development Internship – Task 2
 
-Author
+---
+
+👤 Author
 
 Hemanth Teja
